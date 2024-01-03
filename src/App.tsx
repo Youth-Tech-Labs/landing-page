@@ -1,7 +1,11 @@
 import '@fontsource-variable/inter';
 import './App.css'
 import logo from './assets/logo.png'
+import ac from './assets/Sponsors/ac.png'
+import swril from './assets/Sponsors/swril.jpg'
+
 import { GraduationCapIcon, LightbulbIcon, ZapIcon } from 'lucide-react'
+import { Link } from 'react-scroll'
 
 function App() {
   return <>
@@ -10,15 +14,23 @@ function App() {
         src={logo}
         className='absolute h-[100px] translate-x-5 translate-y-3 cursor-pointer'
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        alt="Youth Tech Labs Logo"
       />
-      <span className='ml-28 text-[#DDD] text-2xl font-[600] whitespace-nowrap'>Youth Tech Labs</span>
+      <span
+        className='ml-28 text-[#DDD] text-2xl font-[600] whitespace-nowrap cursor-pointer'
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+          Youth Tech Labs
+      </span>
       <div className="hidden items-center ml-12 mr-8 lg:flex w-full">
         <button
-          onClick={() => document.getElementById("section-2")?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: document.body.clientHeight })}
           className='text-gray-100/70 hover:text-gray-100/90 transition-all'>
             About
         </button>
-        <button className="bg-amber-400/85 hover:bg-amber-400/90 px-4 py-2 rounded-2xl ml-auto">
+        <button
+          className="bg-amber-400/85 hover:bg-amber-400/90 px-4 py-2 rounded-2xl ml-auto"
+          onClick={() => { window.open('https://forms.gle/osGK1wPM3sM6qAP8A'); return false }}>
         Apply Now!
         </button>
       </div>
@@ -35,7 +47,7 @@ function App() {
       </div>
     </section>
 
-    <section id="section-2" className="w-full h-screen">
+    <section className="w-full h-screen">
       <h2 className="text-[2.5rem] text-center">About us</h2>
       <div className="w-full h-128 flex gap-8 px-8 mt-4 items-stretch">
 
@@ -67,8 +79,18 @@ function App() {
         </div>
       </div>
     </section>
-    <section className="w-full h-screen flex items-center">
-      <h2 className="text-[2.5rem] text-center">About us</h2>
+    <section className="w-full h-screen px-16">
+      <h2 className="text-[2.5rem] text-center mb-4">Sponsors</h2>
+      <div className="max-w-[36rem] bg-white px-12 py-8 rounded-[1rem] mx-auto transition-all">
+        <a href="https://www.acceleratorcentre.com" target='_blank' rel="noopener noreferrer">
+          <img src={ac} alt="Accelerator Centre Logo"/>
+        </a>
+      </div>
+      <div className="max-w-[36rem] bg-white px-12 py-8 rounded-[1rem] mx-auto transition-all cursor-pointer mt-8">
+      <a href="https://www.swril.ca" target='_blank' rel="noopener noreferrer">
+          <img src={swril} alt="Smart Waterloo Region Innovation Lab Logo" />
+        </a>
+      </div>
     </section>
   </>
 }

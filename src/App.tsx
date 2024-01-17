@@ -57,12 +57,12 @@ function App() {
       <div className="hidden items-center ml-12 mr-8 lg:flex w-full">
         <Link to="about" offset={-80} smooth={true} isDynamic={true}>
           <button
-            className='text-gray-100/70 hover:text-gray-100/90 transition-all'>
+            className='text-white hover:text-gray-100/90 transition-all'>
               About
           </button>
         </Link>
         <button
-          className="bg-amber-400/85 hover:bg-amber-400/90 px-4 py-2 rounded-2xl ml-auto"
+          className="bg-[#a43ef6] hover:opacity-80 transition-opacity text-black px-4 py-2 rounded-2xl ml-auto"
           onClick={() => { window.open('https://forms.gle/osGK1wPM3sM6qAP8A'); return false }}>
         Apply Now!
         </button>
@@ -79,11 +79,11 @@ function App() {
         viewport={{ once: true }}
       >
         <motion.h1
-          className='font-[600] text-[60px] align-center bg-gradient-to-b from-[#FFF6AC] to-[#a44801] text-transparent bg-clip-text leading-[1.125] mt-0'
+          className='font-[600] text-[60px] align-center bg-gradient-to-b from-[rgb(21,180,195)] to-[#4c46d3] text-transparent bg-clip-text leading-[1.125] mt-0'
           variants={child}
         >Empowering the future of tech.</motion.h1>
         <motion.p
-          className='mt-6 text-gray-100/70 text-[1.25rem]'
+          className='mt-6 text-white text-[1.25rem]'
           variants={child}
         >
           Youth Tech Labs is committed to cultivating AI literacy for youth, recognizing the pivotal role youth play in shaping society's technological future.<br />Our mission is to equip young minds with the knowledge and skills necessary to navigate, innovate, and lead in a world influenced <span className='whitespace-nowrap'>by AI.</span>
